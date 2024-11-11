@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Inter } from 'next/font/google'
-import { Moon, Sun, Github, Linkedin, Mail, MapPin, Newspaper } from 'lucide-react'
+import { Moon, Sun, Github, Linkedin, Mail, MapPin, Newspaper, Download, Twitter, Link } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import {
@@ -24,7 +24,7 @@ export default function Home() {
   }
 
   return (
-    <div className={`min-h-screen flex flex-col ${inter.className} ${darkMode ? 'dark' : ''}`}>
+    <div className={`min-h-screen flex flex-col w-full md:w-1/2 mx-auto ${inter.className} ${darkMode ? 'dark' : ''}`}>
       <header className="py-8 border-b">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl font-bold mb-2">Alvaro Peña</h1>
@@ -37,26 +37,13 @@ export default function Home() {
               <Mail className="w-3 h-3" /> me@alvropena.com
             </Badge>
           </div>
-          <div className="flex justify-center space-x-4">
-            <Button variant="outline" size="icon">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <Github className="h-[1.2rem] w-[1.2rem]" />
-                <span className="sr-only">GitHub</span>
-              </a>
-            </Button>
-            <Button variant="outline" size="icon">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-[1.2rem] w-[1.2rem]" />
-                <span className="sr-only">LinkedIn</span>
-              </a>
-            </Button>
-          </div>
+          
         </div>
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-8 space-y-8">
         <section>
-          <h2 className="text-2xl font-bold mb-4">Professional Summary</h2>
+          <h2 className="text-2xl font-bold mb-4">Summary</h2>
           <p className="text-muted-foreground">
             Innovative and detail-oriented Senior Frontend Developer with 7+ years of experience in creating 
             responsive and accessible web applications. Proficient in modern JavaScript frameworks and committed 
@@ -199,15 +186,15 @@ export default function Home() {
             <AccordionContent>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold">E-commerce Platform Revamp</h3>
+                  <h3 className="font-semibold">Onley</h3>
                   <p className="text-sm">Led a team of 3 developers to rebuild a client's e-commerce platform using React, Next.js, and Stripe, resulting in a 25% increase in conversion rates and 40% faster page load times.</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold">AI-Powered Task Management App</h3>
+                  <h3 className="font-semibold">Bhuma</h3>
                   <p className="text-sm">Developed a responsive task management application with React and Firebase, integrating GPT-3 for smart task categorization and priority suggestions, leading to a 50% improvement in user productivity.</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold">Accessibility Audit Tool</h3>
+                  <h3 className="font-semibold">Dudda</h3>
                   <p className="text-sm">Created an open-source browser extension that helps developers identify and fix accessibility issues in real-time, garnering over 10,000 active users within the first month of release.</p>
                 </div>
               </div>
@@ -219,8 +206,23 @@ export default function Home() {
       <footer className="bg-muted py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <Button variant="outline" onClick={toggleDarkMode}>
-            {darkMode ? <Sun className="h-[1.2rem] w-[1.2rem] mr-2" /> : <Moon className="h-[1.2rem] w-[1.2rem] mr-2" />}
-            {darkMode ? 'Light Mode' : 'Dark Mode'}
+            {darkMode ? <Sun className="h-[1.2rem] w-[1.2rem] mr-2" /> : <Moon className="h-[1.2rem] w-[1.2rem] mr-2" />}            
+          </Button>          
+          <Button variant="outline" size="icon">            
+              <Github className="h-[1.2rem] w-[1.2rem]" />
+              <span className="sr-only">GitHub</span>            
+          </Button>
+          <Button variant="outline" size="icon">            
+              <Linkedin className="h-[1.2rem] w-[1.2rem]" />
+              <span className="sr-only">LinkedIn</span>            
+          </Button>
+          <Button variant="outline" size="icon">              
+              <Twitter className="h-[1.2rem] w-[1.2rem]" />
+              <span className="sr-only">Twitter</span>            
+          </Button>
+          <Button variant="outline" size="icon">
+            <Download className="h-[1.2rem] w-[1.2rem]" />
+            <span className="sr-only">Download Resume</span>
           </Button>
           <Button variant="outline">
             <a href="https://example.com/newsletter" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
