@@ -45,10 +45,9 @@ export default function Home() {
         <section>
           <h2 className="text-2xl font-bold mb-4">Summary</h2>
           <p className="text-muted-foreground">
-            Innovative and detail-oriented Senior Frontend Developer with 7+ years of experience in creating 
-            responsive and accessible web applications. Proficient in modern JavaScript frameworks and committed 
-            to delivering high-quality, user-centric solutions. Passionate about mentoring junior developers and 
-            staying at the forefront of web technologies.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </p>
         </section>
 
@@ -57,7 +56,7 @@ export default function Home() {
             <AccordionTrigger>Skills</AccordionTrigger>
             <AccordionContent>
               <div className="flex flex-wrap gap-2">
-                {['JavaScript', 'React', 'Next.js', 'TypeScript', 'HTML/CSS', 'Node.js', 'Git', 'Responsive Design', 'UI/UX', 'Performance Optimization', 'Agile Methodologies', 'RESTful APIs', 'GraphQL', 'Jest', 'Cypress'].map((skill) => (
+                {['Lorem', 'Ipsum', 'Dolor', 'Sit', 'Amet', 'Consectetur', 'Adipiscing', 'Elit', 'Tempor', 'Incididunt', 'Labore', 'Dolore', 'Magna', 'Aliqua'].map((skill) => (
                   <Badge key={skill} variant="secondary">{skill}</Badge>
                 ))}
               </div>
@@ -70,22 +69,22 @@ export default function Home() {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-lg font-semibold">Senior Frontend Developer</h3>
-                  <p className="text-sm text-muted-foreground">TechCorp Inc. | 2020 - Present</p>
+                  <p className="text-sm text-muted-foreground">Lorem Ipsum Inc. | 2020 - Present</p>
                   <ul className="list-disc list-inside mt-2 space-y-1">
-                    <li>Led the development of the company's flagship web application using React and Next.js, resulting in a 30% increase in user engagement</li>
-                    <li>Improved application performance by 40% through code optimization and implementation of lazy loading techniques</li>
-                    <li>Mentored a team of 5 junior developers, conducting regular code reviews and knowledge sharing sessions</li>
-                    <li>Implemented a component library that reduced development time for new features by 25%</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                    <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+                    <li>Ut enim ad minim veniam, quis nostrud exercitation</li>
+                    <li>Duis aute irure dolor in reprehenderit in voluptate</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Frontend Developer</h3>
-                  <p className="text-sm text-muted-foreground">WebSolutions LLC | 2018 - 2020</p>
+                  <p className="text-sm text-muted-foreground">Dolor Sit LLC | 2018 - 2020</p>
                   <ul className="list-disc list-inside mt-2 space-y-1">
-                    <li>Developed and maintained 10+ client websites using JavaScript, HTML, and CSS, consistently meeting project deadlines</li>
-                    <li>Collaborated with UX designers to implement responsive and accessible user interfaces, improving overall user satisfaction by 35%</li>
-                    <li>Integrated third-party APIs and services to enhance website functionality, including payment gateways and social media platforms</li>
-                    <li>Optimized website load times, achieving an average improvement of 50% across all projects</li>
+                    <li>Excepteur sint occaecat cupidatat non proident</li>
+                    <li>Sunt in culpa qui officia deserunt mollit anim id est laborum</li>
+                    <li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</li>
+                    <li>Quis autem vel eum iure reprehenderit qui in ea voluptate</li>
                   </ul>
                 </div>
               </div>
@@ -98,13 +97,13 @@ export default function Home() {
               <div className="space-y-4">
                 <div>
                   <h3 className="font-semibold">Master of Science in Web Engineering</h3>
-                  <p className="text-sm text-muted-foreground">Tech University | 2020 - 2022</p>
-                  <p className="text-sm">Thesis: "Optimizing React Applications for Performance and Accessibility"</p>
+                  <p className="text-sm text-muted-foreground">Lorem University | 2020 - 2022</p>
+                  <p className="text-sm">Thesis: "Lorem ipsum dolor sit amet consectetur"</p>
                 </div>
                 <div>
                   <h3 className="font-semibold">Bachelor of Science in Computer Science</h3>
-                  <p className="text-sm text-muted-foreground">University of Technology | 2014 - 2018</p>
-                  <p className="text-sm">Minor: User Experience Design</p>
+                  <p className="text-sm text-muted-foreground">Ipsum University | 2014 - 2018</p>
+                  <p className="text-sm">Minor: Lorem Ipsum Design</p>
                 </div>
               </div>
             </AccordionContent>
@@ -120,16 +119,16 @@ export default function Home() {
                     <ScrollArea className="h-[200px] w-full rounded-md border p-4">
                       <ul className="space-y-4">
                         <li>
-                          <h4 className="font-semibold">Best Web Application Award</h4>
-                          <p className="text-sm text-muted-foreground">TechCorp Annual Innovation Contest | 2023</p>
+                          <h4 className="font-semibold">Lorem Ipsum Award</h4>
+                          <p className="text-sm text-muted-foreground">Dolor Annual Innovation | 2023</p>
                         </li>
                         <li>
-                          <h4 className="font-semibold">Outstanding Contributor</h4>
-                          <p className="text-sm text-muted-foreground">React Community Recognition | 2022</p>
+                          <h4 className="font-semibold">Outstanding Lorem</h4>
+                          <p className="text-sm text-muted-foreground">Ipsum Community Recognition | 2022</p>
                         </li>
                         <li>
-                          <h4 className="font-semibold">1st Place, Hackathon</h4>
-                          <p className="text-sm text-muted-foreground">City Tech Week | 2021</p>
+                          <h4 className="font-semibold">1st Place, Lorem</h4>
+                          <p className="text-sm text-muted-foreground">Dolor Tech Week | 2021</p>
                         </li>
                       </ul>
                     </ScrollArea>
@@ -141,16 +140,16 @@ export default function Home() {
                     <ScrollArea className="h-[200px] w-full rounded-md border p-4">
                       <ul className="space-y-4">
                         <li>
-                          <h4 className="font-semibold">AWS Certified Developer - Associate</h4>
-                          <p className="text-sm text-muted-foreground">Amazon Web Services | 2023</p>
+                          <h4 className="font-semibold">Lorem Certified Developer</h4>
+                          <p className="text-sm text-muted-foreground">Ipsum Services | 2023</p>
                         </li>
                         <li>
-                          <h4 className="font-semibold">Google Professional Cloud Developer</h4>
-                          <p className="text-sm text-muted-foreground">Google Cloud | 2022</p>
+                          <h4 className="font-semibold">Dolor Professional Developer</h4>
+                          <p className="text-sm text-muted-foreground">Sit Cloud | 2022</p>
                         </li>
                         <li>
-                          <h4 className="font-semibold">Certified Scrum Master (CSM)</h4>
-                          <p className="text-sm text-muted-foreground">Scrum Alliance | 2021</p>
+                          <h4 className="font-semibold">Certified Amet Master</h4>
+                          <p className="text-sm text-muted-foreground">Consectetur Alliance | 2021</p>
                         </li>
                       </ul>
                     </ScrollArea>
@@ -162,16 +161,16 @@ export default function Home() {
                     <ScrollArea className="h-[200px] w-full rounded-md border p-4">
                       <ul className="space-y-4">
                         <li>
-                          <h4 className="font-semibold">Advanced React Patterns</h4>
-                          <p className="text-sm text-muted-foreground">Frontend Masters | 2023</p>
+                          <h4 className="font-semibold">Advanced Lorem Patterns</h4>
+                          <p className="text-sm text-muted-foreground">Ipsum Masters | 2023</p>
                         </li>
                         <li>
-                          <h4 className="font-semibold">Web Accessibility</h4>
-                          <p className="text-sm text-muted-foreground">Udacity | 2022</p>
+                          <h4 className="font-semibold">Dolor Accessibility</h4>
+                          <p className="text-sm text-muted-foreground">Sit Academy | 2022</p>
                         </li>
                         <li>
-                          <h4 className="font-semibold">GraphQL Fundamentals</h4>
-                          <p className="text-sm text-muted-foreground">Apollo GraphQL | 2021</p>
+                          <h4 className="font-semibold">Amet Fundamentals</h4>
+                          <p className="text-sm text-muted-foreground">Consectetur Learning | 2021</p>
                         </li>
                       </ul>
                     </ScrollArea>
@@ -186,16 +185,16 @@ export default function Home() {
             <AccordionContent>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold">Onley</h3>
-                  <p className="text-sm">Led a team of 3 developers to rebuild a client's e-commerce platform using React, Next.js, and Stripe, resulting in a 25% increase in conversion rates and 40% faster page load times.</p>
+                  <h3 className="font-semibold">Lorem</h3>
+                  <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold">Bhuma</h3>
-                  <p className="text-sm">Developed a responsive task management application with React and Firebase, integrating GPT-3 for smart task categorization and priority suggestions, leading to a 50% improvement in user productivity.</p>
+                  <h3 className="font-semibold">Ipsum</h3>
+                  <p className="text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold">Dudda</h3>
-                  <p className="text-sm">Created an open-source browser extension that helps developers identify and fix accessibility issues in real-time, garnering over 10,000 active users within the first month of release.</p>
+                  <h3 className="font-semibold">Dolor</h3>
+                  <p className="text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
               </div>
             </AccordionContent>
