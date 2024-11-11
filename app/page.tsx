@@ -98,7 +98,7 @@ export default function Home() {
                 <div>
                   <h3 className="font-semibold">Master of Science in Web Engineering</h3>
                   <p className="text-sm text-muted-foreground">Lorem University | 2020 - 2022</p>
-                  <p className="text-sm">Thesis: "Lorem ipsum dolor sit amet consectetur"</p>
+                  <p className="text-sm">Thesis: &ldquo;Lorem ipsum dolor sit amet consectetur&ldquo;</p>
                 </div>
                 <div>
                   <h3 className="font-semibold">Bachelor of Science in Computer Science</h3>
