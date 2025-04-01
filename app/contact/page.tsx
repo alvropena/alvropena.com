@@ -19,7 +19,7 @@ export default function Contact() {
   };
 
   return (
-    <main className="flex flex-col items-center gap-6 max-w-md w-full text-center">
+    <main className="flex flex-col items-center gap-6 max-w-xl w-full text-center">
       <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
         Contact
       </h1>
