@@ -15,6 +15,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-['-apple-system','SF_Pro_Display','SF_Pro_Text','Helvetica_Neue','Helvetica','Arial',sans-serif] antialiased">
         {children}
+        <footer className="absolute bottom-4 text-sm text-gray-500 w-full text-center">
+          © {new Date().getFullYear()} Alvaro Peña
+        </footer>
       </body>
     </html>
   );

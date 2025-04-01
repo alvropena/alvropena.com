@@ -5,7 +5,7 @@ export default function Home() {
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
           Alvaro Peña
         </h1>
-       
+
         <div className="flex gap-4 mt-2">
           <a
             href="https://alvropena.beehiiv.com"
@@ -29,10 +29,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-      
-      <footer className="absolute bottom-4 text-sm text-gray-500">
-        © {new Date().getFullYear()} Alvaro Peña
-      </footer>
     </div>
   );
 }
