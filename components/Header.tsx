@@ -43,6 +43,12 @@ const Header = () => {
           <SheetContent side="left">
             <nav className="flex flex-col gap-6 mt-12">
               <Link
+                href="/"
+                className="text-lg hover:underline hover:underline-offset-4"
+              >
+                salaì
+              </Link>
+              <Link
                 href="https://alvropena.beehiiv.com"
                 target="_blank"
                 rel="noopener noreferrer"

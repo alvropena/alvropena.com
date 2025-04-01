@@ -14,13 +14,6 @@ interface Message {
   isNew?: boolean; // Track if message is new and should have animation
 }
 
-// Function to format text with links
-const formatTextWithLinks = (text: string): string => {
-  // Match URLs in the text
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  return text.replace(urlRegex, '<a href="$1" class="text-blue-500 underline hover:text-blue-700">here</a>');
-};
-
 // Predefined questions and responses
 const PREDEFINED_QUESTIONS = [
   "Who is Alvaro?",

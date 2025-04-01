@@ -8,7 +8,6 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { useState } from "react";
 import {
