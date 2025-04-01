@@ -8,7 +8,9 @@ export default function Home() {
        
         <div className="flex gap-4 mt-2">
           <a
-            href="/blog"
+            href="https://alvropena.beehiiv.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm hover:underline hover:underline-offset-4"
           >
             Blog
@@ -20,7 +22,7 @@ export default function Home() {
             Projects
           </a>
           <a
-            href="mailto:contact@alvropena.com"
+            href="/contact"
             className="text-sm hover:underline hover:underline-offset-4"
           >
             Contact
