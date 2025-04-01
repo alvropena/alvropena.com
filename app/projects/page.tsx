@@ -32,12 +32,12 @@ export default function Projects() {
   };
 
   return (
-    <main className="flex flex-col items-center gap-8 max-w-2xl w-full text-center">
+    <main className="flex flex-col items-center gap-8 w-full px-4 sm:px-0 sm:max-w-2xl">
       <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
         Projects
       </h1>
 
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
         {/* Show all projects on desktop */}
         <div className="hidden sm:contents">
           {projects.map((project, index) => (
@@ -89,14 +89,14 @@ export default function Projects() {
 // ProjectCard component to avoid repetition
 function ProjectCard({ project }: { project: typeof projects[0] }) {
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <Link
         href={project.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="block"
+        className="block w-full"
       >
-        <Card className="hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors h-full">
+        <Card className="hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors h-full w-full">
           <CardHeader className="flex flex-row items-start justify-between space-y-0 p-4">
             <CardTitle className="text-lg font-medium">
               {project.title}
