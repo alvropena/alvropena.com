@@ -13,7 +13,7 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4">
+    <div className="h-fit flex flex-col items-center justify-center p-4">
       <main className="flex flex-col items-center gap-8 max-w-2xl w-full text-center">
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
           Projects
