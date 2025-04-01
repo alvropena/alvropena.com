@@ -19,47 +19,45 @@ export default function Contact() {
   };
 
   return (
-    <div className="h-fit flex flex-col items-center justify-center p-4">
-      <main className="flex flex-col items-center gap-6 max-w-md w-full text-center">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-          Contact
-        </h1>
+    <main className="flex flex-col items-center gap-6 max-w-md w-full text-center">
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+        Contact
+      </h1>
+      
+      <form onSubmit={handleSubmit} className="w-full space-y-4">
+        <div className="space-y-2">
+          <Input
+            type="text"
+            placeholder="Name"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            required
+          />
+        </div>
         
-        <form onSubmit={handleSubmit} className="w-full space-y-4">
-          <div className="space-y-2">
-            <Input
-              type="text"
-              placeholder="Name"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              required
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Input
-              type="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              required
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Textarea
-              placeholder="Message"
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              required
-            />
-          </div>
-          
-          <Button type="submit" className="w-full">
-            Send
-          </Button>
-        </form>
-      </main>
-    </div>
+        <div className="space-y-2">
+          <Input
+            type="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            required
+          />
+        </div>
+        
+        <div className="space-y-2">
+          <Textarea
+            placeholder="Message"
+            value={formData.message}
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            required
+          />
+        </div>
+        
+        <Button type="submit" className="w-full">
+          Send
+        </Button>
+      </form>
+    </main>
   );
 }
