@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4">
@@ -7,26 +9,26 @@ export default function Home() {
         </h1>
 
         <div className="flex gap-4 mt-2">
-          <a
+          <Link
             href="https://alvropena.beehiiv.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm hover:underline hover:underline-offset-4"
           >
             Blog
-          </a>
-          <a
+          </Link>
+          <Link
             href="/projects"
             className="text-sm hover:underline hover:underline-offset-4"
           >
             Projects
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className="text-sm hover:underline hover:underline-offset-4"
           >
             Contact
-          </a>
+          </Link>
         </div>
       </main>
     </div>
