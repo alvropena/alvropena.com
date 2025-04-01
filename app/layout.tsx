@@ -12,11 +12,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-['-apple-system','SF_Pro_Display','SF_Pro_Text','Helvetica_Neue','Helvetica','Arial',sans-serif] antialiased h-fit sm:h-screen flex flex-col items-center justify-center p-4">
-        <div className="flex-1 flex items-center py-8 sm:py-0">
+      <body className="font-['-apple-system','SF_Pro_Display','SF_Pro_Text','Helvetica_Neue','Helvetica','Arial',sans-serif] antialiased min-h-screen flex flex-col justify-between p-4">
+        <div />
+        <main className="flex items-center justify-center w-full">
           {children}
-        </div>
-        <footer className="text-sm text-gray-500 w-full text-center mt-4 sm:mt-8">
+        </main>
+        <footer className="text-sm text-gray-500 w-full text-center">
           © {new Date().getFullYear()} Alvaro Peña
         </footer>
       </body>

@@ -9,6 +9,14 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "reelfarm.ai",
+    description: "Open source version of reel.farm",
+    url: "https://reelfarm.ai",
+    github: "https://github.com/alvropena/reelfarm.ai",
+    status: "active",
+    milestones: ["MVP"],
+  },
+  {
     title: "dmv.gg",
     description: "Modern learning platform for Gen Z drivers",
     url: "https://dmv.gg",
@@ -32,13 +40,14 @@ export const projects: Project[] = [
     status: "active",
     milestones: ["100k+ messages"],
   },
+
   {
     title: "bhuma.dev",
     description: "Natural language to SQL query converter",
     url: "https://bhuma.dev",
     github: "",
     status: "inactive",
-    milestones: [],
+    milestones: ["MVP"],
   },
   {
     title: "dudda.app",
