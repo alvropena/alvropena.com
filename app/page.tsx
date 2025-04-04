@@ -2,9 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { SendIcon } from "lucide-react";
 import TypingAnimation from "@/components/TypingAnimation";
-import AnimatedBadges from "@/components/AnimatedBadges";
+import StaticQuestions from "@/components/StaticQuestions";
 import { useState, useRef, useEffect } from "react";
 
 interface Message {
@@ -16,10 +17,10 @@ interface Message {
 
 // Predefined questions and responses
 const PREDEFINED_QUESTIONS = [
-  "Who is Alvaro?",
-  "What is Alvaro working on right now?",
-  "How can I contact Alvaro?",
-  "What is Alvaro reading?"
+  "who is alvaro?",
+  "what is alvaro working on?",
+  "how can i contact alvaro?",
+  "what is alvaro reading?"
 ];
 
 const getResponseForQuestion = (question: string): { text: string, hasLinks: boolean } => {
@@ -29,35 +30,35 @@ const getResponseForQuestion = (question: string): { text: string, hasLinks: boo
   // Check against our predefined questions first
   if (normalizedQuestion.includes("who is alvaro") || normalizedQuestion.includes("about alvaro")) {
     return {
-      text: "Alvaro Peña is a Economist, self-taught software engineer and designer.",
+      text: "alvaro peña is a economist, self-taught software engineer and designer.",
       hasLinks: false
     };
   } 
   
   if (normalizedQuestion.includes("working on") || normalizedQuestion.includes("current project")) {
     return {
-      text: "Currently, Alvaro is working on automating his digital life to the fullest extent possible with AI.",
+      text: "currently, alvaro is working on automating his digital life to the fullest extent possible with ai.",
       hasLinks: false
     };
   }
   
   if (normalizedQuestion.includes("contact") || normalizedQuestion.includes("email") || normalizedQuestion.includes("reach")) {
     return {
-      text: "You can contact Alvaro through the contact form <a href=\"https://alvropena.com/contact\" class=\"text-blue-500 underline hover:text-blue-700\">here</a>. He rarely responds on social media.",
+      text: "you can contact alvaro through the contact form <a href=\"https://alvropena.com/contact\" class=\"text-blue-500 underline hover:text-blue-700\">here</a>. he rarely responds on social media.",
       hasLinks: true
     };
   }
   
   if (normalizedQuestion.includes("reading") || normalizedQuestion.includes("book")) {
     return {
-      text: "Alvaro is currently reading 'The Physics of Superheroes' by James Kakalios.",
+      text: "alvaro is currently reading 'the physics of superheroes' by james kakalios.",
       hasLinks: false
     };
   }
 
   // Default response for other questions
   return {
-    text: `I'll pass your question to Alvaro. In the meantime, feel free to ask me about what Alvaro is working on, how to contact him, or what he's reading.`,
+    text: `i'll pass your question to alvaro. in the meantime, feel free to ask me about what alvaro is working on, how to contact him, or what he's reading.`,
     hasLinks: false
   };
 };
@@ -66,7 +67,7 @@ export default function Home() {
   const [inputValue, setInputValue] = useState("");
   const [messages, setMessages] = useState<Message[]>([
     {
-      text: "Hello, I'm Salaì, Alvaro's personal AI assistant. I'm here to help you answer question you may have.",
+      text: "hello, i'm salaì, alvaro's personal ai assistant. i'm here to help you answer question you may have.",
       isUser: false,
       hasLinks: false,
       isNew: true
@@ -91,8 +92,9 @@ export default function Home() {
     }
   }, [messages]);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    // Force the input value to lowercase
+    setInputValue(e.target.value.toLowerCase());
   };
 
   const handleSendMessage = () => {
@@ -151,7 +153,7 @@ export default function Home() {
   return (
     <main className="flex flex-col h-full w-full">
       {/* Chat interface container with fixed height */}
-      <div className="w-full border border-gray-200 rounded-lg mb-3 dark:border-gray-700 flex flex-col h-[calc(100vh-220px)]">
+      <div className="w-full border border-gray-200 rounded-lg mb-3 dark:border-gray-700 flex flex-col h-[calc(100vh-220px)] mt-2">
         {/* Chat messages with scrolling */}
         <div className="flex-1 overflow-y-auto p-4">
           <div className="flex flex-col gap-3">
@@ -190,27 +192,32 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Animated badges */}
-      <AnimatedBadges 
+      {/* Static question options */}
+      <StaticQuestions 
         questions={PREDEFINED_QUESTIONS} 
         onSelectQuestion={handleSelectQuestion}
       />
 
       {/* Input area with UI components */}
       <div className="relative w-full">
-        <Input
-          type="text"
-          placeholder="Ask me anything..."
-          className="pr-12"
+        <Textarea
+          placeholder="ask me anything..."
+          className="pr-12 resize-none"
           value={inputValue}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
+          rows={1}
+          style={{ 
+            minHeight: "40px",
+            maxHeight: "80px",
+            overflowY: "auto"
+          }}
         />
-        <Button 
-          variant="ghost" 
+        <Button
+          variant="ghost"           
           size="icon" 
           className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7 text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
-          aria-label="Send message"
+          aria-label="send message"
           onClick={handleSendMessage}
         >
           <SendIcon className="h-4 w-4" />

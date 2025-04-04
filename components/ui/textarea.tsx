@@ -5,14 +5,32 @@ import { cn } from "@/lib/utils"
 const Textarea = React.forwardRef<
   HTMLTextAreaElement,
   React.ComponentProps<"textarea">
->(({ className, ...props }, ref) => {
+>(({ className, placeholder, ...props }, ref) => {
+  // Convert placeholder to lowercase if it exists
+  const lowercasePlaceholder = placeholder?.toLowerCase();
+  
+  // Handle input changes to force lowercase
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const lowercaseValue = e.target.value.toLowerCase();
+    
+    // Update the textarea value to be lowercase
+    e.target.value = lowercaseValue;
+    
+    // If onChange was provided, call it with the modified event
+    if (props.onChange) {
+      props.onChange(e);
+    }
+  };
+
   return (
     <textarea
       className={cn(
-        "flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm lowercase",
         className
       )}
       ref={ref}
+      placeholder={lowercasePlaceholder}
+      onChange={handleChange}
       {...props}
     />
   )

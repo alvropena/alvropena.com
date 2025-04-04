@@ -6,12 +6,14 @@ interface TypingAnimationProps {
   text: string;
   delay?: number;
   className?: string;
+  completionDelay?: number;
 }
 
 export default function TypingAnimation({ 
   text, 
   delay = 40, 
-  className = ""
+  className = "",
+  completionDelay = 800
 }: TypingAnimationProps) {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,9 +28,15 @@ export default function TypingAnimation({
       
       return () => clearTimeout(timeout);
     } else {
-      setIsComplete(true);
+      // Add a delay before marking the animation as complete
+      // so the cursor remains visible for a moment after typing finishes
+      const completionTimeout = setTimeout(() => {
+        setIsComplete(true);
+      }, completionDelay);
+      
+      return () => clearTimeout(completionTimeout);
     }
-  }, [text, currentIndex, delay]);
+  }, [text, currentIndex, delay, completionDelay]);
 
   return (
     <div className={className}>
