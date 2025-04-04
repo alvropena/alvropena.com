@@ -8,27 +8,19 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-    title: "reelfarm.ai",
-    description: "Open source version of reel.farm",
-    url: "https://reelfarm.ai",
-    github: "https://github.com/alvropena/reelfarm.ai",
-    status: "active",
-    milestones: ["MVP"],
-  },
+  // {
+  //   title: "unemployed.tech",
+  //   description: "AI resume builder for tech professionals",
+  //   url: "https://unemployed.tech",
+  //   github: "https://github.com/alvropena/unemployed.tech",
+  //   status: "active",
+  //   milestones: ["MVP"],
+  // },
   {
     title: "dmv.gg",
     description: "Modern learning platform for Gen Z drivers",
     url: "https://dmv.gg",
     github: "https://github.com/alvropena/dmv.gg",
-    status: "active",
-    milestones: ["MVP"],
-  },
-  {
-    title: "unemployed.tech",
-    description: "AI resume builder for tech professionals",
-    url: "https://unemployed.tech",
-    github: "https://github.com/alvropena/unemployed.tech",
     status: "active",
     milestones: ["MVP"],
   },
