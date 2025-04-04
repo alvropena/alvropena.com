@@ -9,21 +9,21 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  // {
+  //   title: "unemployed.tech",
+  //   description: "ai resume builder for tech professionals",
+  //   url: "https://unemployed.tech",
+  //   github: "https://github.com/alvropena/unemployed.tech",
+  //   image: "https://picsum.photos/800/200?random=5",
+  //   status: "active",
+  //   milestones: ["mvp"],
+  // },
   {
     title: "dmv.gg",
     description: "modern learning platform for gen z drivers",
     url: "https://dmv.gg",
     github: "https://github.com/alvropena/dmv.gg",
     image: "https://picsum.photos/800/200?random=1",
-    status: "active",
-    milestones: ["mvp"],
-  },
-  {
-    title: "unemployed.tech",
-    description: "ai resume builder for tech professionals",
-    url: "https://unemployed.tech",
-    github: "https://github.com/alvropena/unemployed.tech",
-    image: "https://picsum.photos/800/200?random=5",
     status: "active",
     milestones: ["mvp"],
   },
