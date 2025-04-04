@@ -9,7 +9,6 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import SocialIcons from "@/components/SocialIcons";
 
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
