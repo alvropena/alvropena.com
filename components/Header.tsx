@@ -7,8 +7,7 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
-  SheetClose,
-  SheetFooter
+  SheetClose
 } from "@/components/ui/sheet";
 import SocialIcons from "@/components/SocialIcons";
 
