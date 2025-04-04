@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "alvaro peña",
+  title: "Alvaro Peña",
 };
 
 type RootLayoutProps = {

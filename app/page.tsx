@@ -152,9 +152,9 @@ export default function Home() {
   return (
     <main className="flex flex-col h-full w-full">
       {/* Chat interface container with fixed height */}
-      <div className="w-full border border-gray-200 rounded-lg mb-3 dark:border-gray-700 flex flex-col h-[calc(100vh-220px)] mt-2">
+      <div className="w-full border border-input rounded-lg mb-4 dark:border-input flex flex-col h-[calc(100vh-260px)] mt-4">
         {/* Chat messages with scrolling */}
-        <div className="flex-1 overflow-y-auto p-4">
+        <div className="flex-1 overflow-y-auto p-8">
           <div className="flex flex-col gap-3">
             {messages.map((message, index) => (
               <div key={index} className={`flex flex-col gap-1 ${message.isUser ? 'items-end' : 'items-start'}`}>
