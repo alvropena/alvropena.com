@@ -25,7 +25,7 @@ export const projects: Project[] = [
     github: "https://github.com/alvropena/dmv.gg",
     image: "https://picsum.photos/800/200?random=1",
     status: "active",
-    milestones: ["mvp"],
+    milestones: ["MVP"],
   },
   {
     title: "onley.ai",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     github: "",
     image: "https://picsum.photos/800/200?random=3",
     status: "inactive",
-    milestones: ["mvp"],
+    milestones: ["MVP"],
   },
   {
     title: "dudda.app",
