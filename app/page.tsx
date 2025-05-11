@@ -25,13 +25,13 @@ export default function Home() {
           </a>
         </div>
         <p className="text-lg">
-          Hi! I'm Alvaro, a self-taught Software Engineer and Economics student
+          Hi! I&apos;m Alvaro, a self-taught Software Engineer and Economics student
           at Cal State East Bay.
         </p>
         <p className="text-lg">
-          This summer, I'm interning as a Full Stack Software Engineer at{" "}
+          This summer, I&apos;m interning as a Full Stack Software Engineer at{" "}
           <a
-            href="https://www.linkedin.com/company/favorited/"
+            href="https://www.linkedin.com/company/favapp/"
             className="text-blue-500"
           >
             Favorited
@@ -60,7 +60,7 @@ export default function Home() {
           from Universidad del Pacífico to Cal State East Bay.
         </p>
         <p className="text-lg">
-          I'm currently teaching myself physics, marketing, and poker.
+          I&apos;m currently teaching myself physics, marketing, and poker.
         </p>
         <p className="text-lg">
           <Link href="https://drive.google.com/file/d/1zYUmIjZYaW450Pq-U6HxoqtIBEuUg5j1/view?usp=sharing" className="text-blue-500" target="_blank" rel="noopener noreferrer">
