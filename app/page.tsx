@@ -114,7 +114,16 @@ export default function Home() {
           >
             Universidad del Pacífico
           </Link>{" "}
-          to Cal State East Bay .
+          to{" "}
+          <Link
+            href="https://www.csueastbay.edu/"
+            className="text-blue-500"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Cal State East Bay
+          </Link>
+          .
         </p>
         <p className="text-lg">
           I&apos;m currently teaching myself physics, marketing, and poker.
