@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen min-w-full items-center justify-center px-4">
+    <div className="h-screen flex items-center justify-center px-4">
       <div className="max-w-sm flex flex-col gap-4">
         <div className="flex flex-row gap-4 justify-start mb-2">
           {/* Twitter (X) */}

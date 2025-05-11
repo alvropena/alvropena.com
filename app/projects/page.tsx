@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function ProjectsPage() {
   return (
-    <div className="flex min-h-screen min-w-full items-center justify-center px-4">
+    <div className="h-screen flex items-center justify-center px-4">
       <div className="max-w-sm flex flex-col gap-4">
         <Link href="/" className="text-2xl flex items-center gap-2">
           <ArrowLeft className="w-4 h-4" />
