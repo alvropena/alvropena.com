@@ -1,227 +1,83 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { SendIcon } from "lucide-react";
-import TypingAnimation from "@/components/TypingAnimation";
-import StaticQuestions from "@/components/StaticQuestions";
-import { useState, useRef, useEffect } from "react";
-
-interface Message {
-  text: string;
-  isUser: boolean;
-  hasLinks?: boolean;
-  isNew?: boolean; // Track if message is new and should have animation
-}
-
-// Predefined questions and responses
-const PREDEFINED_QUESTIONS = [
-  "who is alvaro?",
-  "what is alvaro working on?",
-  "how can i contact alvaro?",
-  "what is alvaro reading?"
-];
-
-const getResponseForQuestion = (question: string): { text: string, hasLinks: boolean } => {
-  // Normalize the question for easier matching
-  const normalizedQuestion = question.toLowerCase().trim();
-
-  // Check against our predefined questions first
-  if (normalizedQuestion.includes("who is alvaro") || normalizedQuestion.includes("about alvaro")) {
-    return {
-      text: "alvaro peña is a economist, self-taught software engineer and designer.",
-      hasLinks: false
-    };
-  } 
-  
-  if (normalizedQuestion.includes("working on") || normalizedQuestion.includes("current project")) {
-    return {
-      text: "currently, alvaro is working on automating his digital life to the fullest extent possible with ai.",
-      hasLinks: false
-    };
-  }
-  
-  if (normalizedQuestion.includes("contact") || normalizedQuestion.includes("email") || normalizedQuestion.includes("reach")) {
-    return {
-      text: "you can contact alvaro through the contact form <a href=\"https://alvropena.com/contact\" class=\"text-blue-500 underline hover:text-blue-700\">here</a>. he rarely responds on social media.",
-      hasLinks: true
-    };
-  }
-  
-  if (normalizedQuestion.includes("reading") || normalizedQuestion.includes("book")) {
-    return {
-      text: "alvaro is currently reading 'the physics of superheroes' by james kakalios.",
-      hasLinks: false
-    };
-  }
-
-  // Default response for other questions
-  return {
-    text: `i'll pass your question to alvaro. in the meantime, feel free to ask me about what alvaro is working on, how to contact him, or what he's reading.`,
-    hasLinks: false
-  };
-};
+import Link from 'next/link';
 
 export default function Home() {
-  const [inputValue, setInputValue] = useState("");
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      text: "hello, i'm salaì, alvaro's personal ai assistant. i'm here to help you answer question you may have.",
-      isUser: false,
-      hasLinks: false,
-      isNew: true
-    }
-  ]);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  // Effect to clear the isNew flag after animation completes
-  useEffect(() => {
-    const newMessages = messages.filter(m => m.isNew);
-    
-    if (newMessages.length > 0) {
-      // After 3 seconds (enough time for typing animation to finish)
-      const timeout = setTimeout(() => {
-        setMessages(messages.map(message => ({
-          ...message,
-          isNew: false
-        })));
-      }, 3000);
-      
-      return () => clearTimeout(timeout);
-    }
-  }, [messages]);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    // Force the input value to lowercase
-    setInputValue(e.target.value.toLowerCase());
-  };
-
-  const handleSendMessage = () => {
-    if (inputValue.trim() === "") return;
-    
-    // Add user message
-    const userMessage = inputValue;
-    setMessages([...messages, { text: userMessage, isUser: true, hasLinks: false }]);
-    
-    // Clear input
-    setInputValue("");
-    
-    // Get the appropriate response
-    const response = getResponseForQuestion(userMessage);
-    
-    // Add the AI response after a delay
-    setTimeout(() => {
-      setMessages(prev => [...prev, { 
-        text: response.text, 
-        isUser: false, 
-        hasLinks: response.hasLinks,
-        isNew: true  // Mark as new for animation
-      }]);
-    }, 1000);
-  };
-
-  const handleSelectQuestion = (question: string) => {
-    // Add the selected question as a user message
-    setMessages([...messages, { text: question, isUser: true, hasLinks: false }]);
-    
-    // Get the predefined response
-    const response = getResponseForQuestion(question);
-    
-    // Add the response as an AI message after a short delay
-    setTimeout(() => {
-      setMessages(prev => [...prev, { 
-        text: response.text, 
-        isUser: false, 
-        hasLinks: response.hasLinks,
-        isNew: true  // Mark as new for animation
-      }]);
-    }, 1000);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter") {
-      handleSendMessage();
-    }
-  };
-
-  // Scroll to bottom whenever messages update
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
-
   return (
-    <main className="flex flex-col h-full w-full">
-      {/* Chat interface container with fixed height */}
-      <div className="w-full border border-input rounded-lg mb-4 dark:border-input flex flex-col h-[calc(100vh-260px)] mt-4">
-        {/* Chat messages with scrolling */}
-        <div className="flex-1 overflow-y-auto p-4">
-          <div className="flex flex-col gap-3">
-            {messages.map((message, index) => (
-              <div key={index} className={`flex flex-col gap-1 ${message.isUser ? 'items-end' : 'items-start'}`}>
-                <div className={`p-3 rounded-lg ${
-                  message.isUser 
-                    ? 'bg-blue-500 text-white rounded-br-none self-end' 
-                    : 'bg-gray-100 dark:bg-gray-800 rounded-bl-none self-start'
-                } max-w-[80%]`}>
-                  {!message.isUser && message.isNew ? (
-                    message.hasLinks ? (
-                      // For new AI messages with links, use a special version
-                      <TypingAnimation 
-                        text={message.text.replace(/<[^>]*>/g, 'here')} 
-                        className="text-sm"
-                        delay={30}
-                      />
-                    ) : (
-                      // For new AI messages without links
-                      <TypingAnimation text={message.text} className="text-sm" />
-                    )
-                  ) : (
-                    // For user messages or old AI messages
-                    message.hasLinks ? (
-                      <p className="text-sm" dangerouslySetInnerHTML={{ __html: message.text }}></p>
-                    ) : (
-                      <p className="text-sm">{message.text}</p>
-                    )
-                  )}
-                </div>
-              </div>
-            ))}
-            <div ref={messagesEndRef} />
-          </div>
+    <div className="flex min-h-screen min-w-full items-center justify-center">
+      <div className="max-w-sm flex flex-col gap-4">
+        <div className="flex flex-row gap-4 justify-start mb-2">
+          {/* Twitter (X) */}
+          <a href="https://x.com/alvropenaa" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.53 2.477h3.19l-7.01 8.01 8.24 11.036h-6.47l-5.06-6.77-5.8 6.77H1.44l7.48-8.73L1 2.477h6.61l4.54 6.09 5.38-6.09zm-1.12 16.13h1.77L6.6 4.13H4.71l11.7 14.477z"/>
+            </svg>
+          </a>
+          {/* LinkedIn */}
+          <a href="https://linkedin.com/in/alvropena" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 11.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/>
+            </svg>
+          </a>
+          {/* GitHub */}
+          <a href="https://github.com/alvropena" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+          </a>
         </div>
+        <p className="text-lg">
+          Hi! I'm Alvaro, a self-taught Software Engineer and Economics student
+          at Cal State East Bay.
+        </p>
+        <p className="text-lg">
+          This summer, I'm interning as a Full Stack Software Engineer at{" "}
+          <a
+            href="https://www.linkedin.com/company/favorited/"
+            className="text-blue-500"
+          >
+            Favorited
+          </a>
+          .
+        </p>
+        <p className="text-lg">
+          Previously, I was the Lead Frontend Engineer at{" "}
+          <a
+            href="https://www.linkedin.com/company/onley-ai/"
+            className="text-blue-500"
+          >
+            Onley AI
+          </a>
+          . And before that, I was a Junior Frontend Engineer at{" "}
+          <a
+            href="https://www.linkedin.com/company/eleva-labs/"
+            className="text-blue-500"
+          >
+            Eleva Labs
+          </a>
+          .
+        </p>
+        <p className="text-lg">
+          I was born in Peru and migrated to the US in 2024 after transferring
+          from Universidad del Pacífico to Cal State East Bay.
+        </p>
+        <p className="text-lg">
+          I'm currently teaching myself physics, marketing, and poker.
+        </p>
+        <p className="text-lg">
+          <Link href="https://drive.google.com/file/d/1zYUmIjZYaW450Pq-U6HxoqtIBEuUg5j1/view?usp=sharing" className="text-blue-500" target="_blank" rel="noopener noreferrer">
+            Download my resume
+          </Link>
+        </p>
+        <p className="text-lg">
+          <Link href="/projects" className="text-blue-500">
+            See my projects
+          </Link>
+        </p>
+        <p className="text-lg">
+          <Link href="https://alvropena.posthaven.com" className="text-blue-500" target="_blank" rel="noopener noreferrer">
+            Read my blog
+          </Link>
+        </p>
       </div>
-
-      {/* Static question options */}
-      <StaticQuestions 
-        questions={PREDEFINED_QUESTIONS} 
-        onSelectQuestion={handleSelectQuestion}
-      />
-
-      {/* Input area with UI components */}
-      <div className="relative w-full">
-        <Textarea
-          placeholder="ask me anything..."
-          className="pr-12 resize-none"
-          value={inputValue}
-          onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
-          rows={1}
-          style={{ 
-            minHeight: "40px",
-            maxHeight: "80px",
-            overflowY: "auto"
-          }}
-        />
-        <Button
-          variant="ghost"           
-          size="icon" 
-          className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7 text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
-          aria-label="send message"
-          onClick={handleSendMessage}
-        >
-          <SendIcon className="h-4 w-4" />
-        </Button>
-      </div>
-    </main>
+    </div>
   );
 }
