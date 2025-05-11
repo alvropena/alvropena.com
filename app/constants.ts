@@ -25,7 +25,7 @@ export const projects: Project[] = [
     github: "https://github.com/alvropena/dmv.gg",
     image: "https://picsum.photos/800/200?random=1",
     status: "active",
-    milestones: ["MVP"],
+    milestones: ["500+ users"],
   },
   {
     title: "Onley AI",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     github: "",
     image: "https://picsum.photos/800/200?random=2",
     status: "active",
-    milestones: ["100K+ Messages"],
+    milestones: ["100K+ messages sent"],
   },
   {
     title: "Bhuma",
@@ -52,6 +52,6 @@ export const projects: Project[] = [
     github: "https://github.com/alvropena/dudda.app",
     image: "https://picsum.photos/800/200?random=4",
     status: "inactive",
-    milestones: ["1K+ Users"],
+    milestones: ["1K+ users"],
   },
 ];
