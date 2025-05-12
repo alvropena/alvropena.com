@@ -50,7 +50,7 @@ export default function Home() {
         .
       </p>
       <p>
-        I was born in Peru and migrated to the US in 2024 after transferring
+        I was born in Peru and migrated to the US in 2024 after dropping out
         from{" "}
         <Link
           href="https://www.up.edu.pe/"
@@ -58,17 +58,8 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Universidad del Pacífico
+          Universidad del Pacifico
         </Link>{" "}
-        to{" "}
-        <Link
-          href="https://www.csueastbay.edu/"
-          className="text-blue-500"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Cal State East Bay
-        </Link>
         .
       </p>
       <p>
