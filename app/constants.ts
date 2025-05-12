@@ -29,7 +29,7 @@ export const projects: Project[] = [
   },
   {
     title: "Onley AI",
-    description: "OnlyFans AI Agent for Creators",
+    description: "OnlyFans AI Agent for creators",
     url: "https://onley.ai",
     github: "",
     image: "https://picsum.photos/800/200?random=2",
