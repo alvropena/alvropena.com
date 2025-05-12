@@ -10,15 +10,14 @@ export default function ProjectsPage() {
       {projects.map((project, index) => (
         <div key={project.title} className={index !== projects.length - 1 ? "pb-4 border-b" : ""}>
           <div className="flex items-center gap-2">
-            <p className="mb-0">{project.title}</p>
             <Link
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Open ${project.title} in new window`}
-              className="inline-block align-middle"
+              className="text-blue-500"
             >
-              <ExternalLink className="w-4 h-4" />
+              {project.title}
             </Link>
           </div>
           <p className="text-sm">{project.description}</p>

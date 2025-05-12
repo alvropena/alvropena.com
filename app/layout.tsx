@@ -34,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           >
             <main>
               <div className="h-screen flex items-center justify-center px-4">
-                <div className="pb-20">{children}</div>
+                <div>{children}</div>
               </div>
             </main>
             <BottomNav />
