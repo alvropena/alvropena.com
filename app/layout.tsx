@@ -33,7 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             disableTransitionOnChange
           >
             <main>
-              <div>
+              <div className="h-screen flex items-center justify-center px-4">
                 <div className="pb-20">{children}</div>
               </div>
             </main>
