@@ -3,6 +3,7 @@ import "./globals.css";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
+import { BottomNav } from "@/components/BottomNav";
 
 export const metadata: Metadata = {
   title: "Alvaro Peña",
@@ -26,9 +27,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           >
             <main>
               <div>
-                <div>{children}</div>
+                <div className="pb-20">{children}</div>
               </div>
             </main>
+            <BottomNav />
           </ThemeProvider>
         </body>
       </html>
