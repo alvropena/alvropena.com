@@ -3,6 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="max-w-sm flex flex-col gap-4">
+      <h1 className="text-2xl">Alvaro Peña</h1>
       <p>
         Hi! I&apos;m Alvaro, a self-taught Software Engineer and Economics
         student at{" "}
@@ -59,8 +60,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Universidad del Pacifico
-        </Link>{" "}
-        .
+        </Link>.
       </p>
       <p>
         I&apos;m currently teaching myself physics, marketing, and poker.
