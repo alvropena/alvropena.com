@@ -7,10 +7,7 @@ export default function ProjectsPage() {
   return (
     <div className="h-screen flex items-center justify-center px-4">
       <div className="max-w-sm flex flex-col gap-4">
-        <Link href="/" className="text-2xl flex items-center gap-2">
-          <ArrowLeft className="w-4 h-4" />
-          Projects
-        </Link>
+        Projects
         {projects.map((project) => (
           <div key={project.title}>
             <div className="flex items-center gap-2">

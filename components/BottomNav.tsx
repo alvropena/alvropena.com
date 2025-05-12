@@ -15,7 +15,7 @@ export function BottomNav() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="fixed left-1/2 -translate-x-1/2 bottom-6 z-50 rounded-2xl shadow-lg bg-background/90 backdrop-blur-md border flex items-center justify-center px-4 py-2 gap-2 md:gap-4 w-[90vw] max-w-md">
+    <nav className="fixed left-1/2 -translate-x-1/2 bottom-6 z-50 rounded-2xl shadow-lg bg-background/90 backdrop-blur-md border flex items-center justify-center px-2 py-2 gap-2 md:gap-4 w-[90vw] max-w-md">
       {/* Group 1: Home */}
       <div className="flex items-center">
         <Link href="/" className="p-2 hover:text-primary transition-colors">
