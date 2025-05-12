@@ -1,6 +1,6 @@
 import { projects } from "../constants";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export default function ProjectsPage() {
