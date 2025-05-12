@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="h-screen flex items-center justify-center px-4">
       <div className="max-w-sm flex flex-col gap-4">
-        <p className="text-lg">
+        <p>
           Hi! I&apos;m Alvaro, a self-taught Software Engineer and Economics
           student at{" "}
           <Link
@@ -17,7 +17,7 @@ export default function Home() {
           </Link>
           .
         </p>
-        <p className="text-lg">
+        <p>
           This summer, I&apos;m interning as a Full Stack Software Engineer at{" "}
           <Link
             href="https://www.linkedin.com/company/favapp/"
@@ -29,7 +29,7 @@ export default function Home() {
           </Link>
           .
         </p>
-        <p className="text-lg">
+        <p>
           Previously, I was the Lead Frontend Engineer at{" "}
           <Link
             href="https://www.linkedin.com/company/onley-ai/"
@@ -50,7 +50,7 @@ export default function Home() {
           </Link>
           .
         </p>
-        <p className="text-lg">
+        <p>
           I was born in Peru and migrated to the US in 2024 after transferring
           from{" "}
           <Link
@@ -72,10 +72,10 @@ export default function Home() {
           </Link>
           .
         </p>
-        <p className="text-lg">
+        <p>
           I&apos;m currently teaching myself physics, marketing, and poker.
         </p>
-        <p className="text-lg">
+        <p>
           <Link
             href="https://drive.google.com/file/d/1zYUmIjZYaW450Pq-U6HxoqtIBEuUg5j1/view?usp=sharing"
             className="text-blue-500"
@@ -85,12 +85,12 @@ export default function Home() {
             Download my resume
           </Link>
         </p>
-        <p className="text-lg">
+        <p>
           <Link href="/projects" className="text-blue-500">
             See my projects
           </Link>
         </p>
-        <p className="text-lg">
+        <p>
           <Link
             href="https://alvropena.posthaven.com"
             className="text-blue-500"
