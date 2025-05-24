@@ -30,7 +30,7 @@ export default function Home() {
         .
         And before that, I worked at{" "}
         <Link
-          href="https://www.linkedin.com/company/eleva-labs/"
+          href="https://www.linkedin.com/company/elevalabs/"
           className="text-blue-500"
           target="_blank"
           rel="noopener noreferrer"
@@ -56,7 +56,7 @@ export default function Home() {
       <p>
         In 2024, I migrated to the US from Peru after dropping out of university.
       </p>
-            
+
       <p>
         <Link
           href="https://drive.google.com/file/d/1zYUmIjZYaW450Pq-U6HxoqtIBEuUg5j1/view?usp=sharing"
