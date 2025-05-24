@@ -5,20 +5,7 @@ export default function Home() {
     <div className="max-w-sm flex flex-col gap-4">
       <h1 className="text-2xl">Alvaro Peña</h1>
       <p>
-        Hi! I&apos;m Alvaro, a self-taught Software Engineer and Economics
-        student at{" "}
-        <Link
-          href="https://www.csueastbay.edu/"
-          className="text-blue-500"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Cal State East Bay
-        </Link>
-        .
-      </p>
-      <p>
-        This summer, I&apos;m interning as a Full Stack Software Engineer at{" "}
+        Hi! I&apos;m Alvaro, a self-taught Software Engineer. Currently, I&apos;m interning at{" "}
         <Link
           href="https://www.linkedin.com/company/favapp/"
           className="text-blue-500"
@@ -29,8 +16,9 @@ export default function Home() {
         </Link>
         .
       </p>
+
       <p>
-        Previously, I was the Lead Frontend Engineer at{" "}
+        Previously, I worked at{" "}
         <Link
           href="https://www.linkedin.com/company/onley-ai/"
           className="text-blue-500"
@@ -39,7 +27,8 @@ export default function Home() {
         >
           Onley AI
         </Link>
-        . And before that, I was a Junior Frontend Engineer at{" "}
+        .
+        And before that, I worked at{" "}
         <Link
           href="https://www.linkedin.com/company/eleva-labs/"
           className="text-blue-500"
@@ -50,21 +39,24 @@ export default function Home() {
         </Link>
         .
       </p>
+
       <p>
-        I was born in Peru and migrated to the US in 2024 after dropping out
-        from{" "}
+        I graduated from{" "}
         <Link
-          href="https://www.up.edu.pe/"
+          href="https://www.csueastbay.edu/"
           className="text-blue-500"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Universidad del Pacifico
-        </Link>.
+          California State University, East Bay
+        </Link>
+        {", "}with a B.S. in Economics.
       </p>
+
       <p>
-        I&apos;m currently teaching myself physics, marketing, and poker.
+        In 2024, I migrated to the US from Peru after dropping out of university.
       </p>
+            
       <p>
         <Link
           href="https://drive.google.com/file/d/1zYUmIjZYaW450Pq-U6HxoqtIBEuUg5j1/view?usp=sharing"
