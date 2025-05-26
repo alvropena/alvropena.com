@@ -25,7 +25,7 @@ export const projects: Project[] = [
     github: "https://github.com/alvropena/dmv.gg",
     image: "https://picsum.photos/800/200?random=1",
     status: "active",
-    milestones: ["500+ users"],
+    milestones: ["1K+ users"],
   },
   {
     title: "Onley AI",
