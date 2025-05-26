@@ -72,7 +72,7 @@ export default function Home() {
 			</p>
 			<p>
 				<Link
-					href="https://alvropena.posthaven.com"
+					href="https://blog.alvropena.com"
 					className="text-blue-500"
 					target="_blank"
 					rel="noopener noreferrer"
