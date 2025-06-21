@@ -19,13 +19,13 @@ export const projects: Project[] = [
   //   milestones: ["MVP"],
   // },
   {
-    title: "DMV.gg",
+    title: "GetMyPermit",
     description: "Modern learning platform for Gen Z drivers",
-    url: "https://dmv.gg",
-    github: "https://github.com/alvropena/dmv.gg",
+    url: "https://getmypermit.app",
+    github: "https://github.com/alvropena/getmypermit.app",
     image: "https://picsum.photos/800/200?random=1",
     status: "active",
-    milestones: ["1K+ users"],
+    milestones: ["3K+ users", "$300 MRR"],
   },
   {
     title: "Onley AI",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     url: "https://onley.ai",
     github: "",
     image: "https://picsum.photos/800/200?random=2",
-    status: "active",
+    status: "inactive",
     milestones: ["100K+ messages sent"],
   },
   {
