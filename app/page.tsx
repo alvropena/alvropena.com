@@ -57,7 +57,7 @@ export default function Home() {
 
 			<p>
 				<Link
-					href="https://drive.google.com/file/d/1zYUmIjZYaW450Pq-U6HxoqtIBEuUg5j1/view?usp=sharing"
+					href="https://drive.google.com/file/d/1ZOb8IoOX-QbtB7QHdqPlX-rFyr7hf_3d/view?usp=sharing"
 					className="text-blue-500"
 					target="_blank"
 					rel="noopener noreferrer"
