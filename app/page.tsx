@@ -5,7 +5,7 @@ export default function Home() {
 		<div className="max-w-sm flex flex-col gap-4">
 			<h1 className="text-2xl">Alvaro Peña</h1>
 			<p>
-				I&apos;m a Software Engineer. Currently, I&apos;m interning
+				I&apos;m a Software Engineer. Currently, I&apos;m working
 				at{" "}
 				<Link
 					href="https://www.linkedin.com/company/favapp/"
