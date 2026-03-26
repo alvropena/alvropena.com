@@ -21,7 +21,7 @@ export const projects: Project[] = [
   {
     title: "GetMyPermit",
     description: "Modern learning platform for Gen Z drivers",
-    url: "https://getmypermit.app",
+    url: "https://getmypermit.com",
     github: "https://github.com/alvropena/getmypermit.app",
     image: "https://picsum.photos/800/200?random=1",
     status: "active",
