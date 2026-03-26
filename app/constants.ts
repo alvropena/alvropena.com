@@ -25,7 +25,7 @@ export const projects: Project[] = [
     github: "https://github.com/alvropena/getmypermit.app",
     image: "https://picsum.photos/800/200?random=1",
     status: "active",
-    milestones: ["3K+ users", "$300 MRR"],
+    milestones: ["43K+ users", "$6k MRR"],
   },
   {
     title: "Onley AI",
